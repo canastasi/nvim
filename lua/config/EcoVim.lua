@@ -19,7 +19,7 @@ if has_file_argument() then
 end
 
 EcoVim = {
-	colorscheme = "tokyonight",
+	colorscheme = "darcula",
 	ui = {
 		float = {
 			border = "rounded",

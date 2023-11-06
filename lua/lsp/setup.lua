@@ -14,6 +14,7 @@ mason.setup({
   },
 })
 
+
 mason_lsp.setup({
   -- A list of servers to automatically install if they're not already installed
   ensure_installed = {

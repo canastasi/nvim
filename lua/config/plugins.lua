@@ -1,13 +1,25 @@
 return {
   -- Themes
+  --{
+  --  "folke/tokyonight.nvim",
+  --  lazy = false,
+  --  priority = 1000,
+  --  config = function()
+  --    -- load the colorscheme here
+  --    vim.cmd([[colorscheme tokyonight]])
+  --    require("config.colorscheme")
+  --  end,
+  --},
   {
-    "folke/tokyonight.nvim",
+    "doums/darcula",
     lazy = false,
     priority = 1000,
     config = function()
-      -- load the colorscheme here
-      vim.cmd([[colorscheme tokyonight]])
-      require("config.colorscheme")
+      -- Set the Darcula theme here
+      vim.cmd([[colorscheme darcula]])
+      vim.cmd([[
+        autocmd BufWinEnter * highlight Normal guibg=#1e1f21
+      ]])
     end,
   },
   { "nvim-lua/plenary.nvim" },
