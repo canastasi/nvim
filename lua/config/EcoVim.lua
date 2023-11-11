@@ -9,14 +9,14 @@
 local icons = require("utils.icons")
 
 -- Function to check if Neovim was launched with a file argument
-local function has_file_argument()
-  return vim.fn.argc() > 0 and vim.fn.argv(0) ~= ''
-end
+--local function has_file_argument()
+--  return vim.fn.argc() > 0 and vim.fn.argv(0) ~= ''
+--end
 
 -- Automatically open NvimTree if a file argument is provided
-if has_file_argument() then
-  vim.cmd[[autocmd VimEnter * NvimTreeToggle]]
-end
+--if has_file_argument() then
+--  vim.cmd[[autocmd VimEnter * NvimTreeToggle]]
+--end
 
 EcoVim = {
 	colorscheme = "darcula",
