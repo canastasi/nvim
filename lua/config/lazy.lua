@@ -13,7 +13,6 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup("config.plugins", {
   defaults = { lazy = true },
-  install = { colorscheme = { "tokyonight" } },
   checker = { enabled = true },
   concurrency = 5,
   performance = {
@@ -35,3 +34,4 @@ require("lazy").setup("config.plugins", {
 })
 
 vim.keymap.set("n", "<leader>/l", "<cmd>:Lazy<cr>")
+vim.cmd("colorscheme " .. EcoVim.colorscheme)

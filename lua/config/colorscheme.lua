@@ -63,6 +63,12 @@ tokyonight.setup({
 
 -- Set Colorscheme
 vim.cmd("colorscheme " .. EcoVim.colorscheme)
+local file = io.open("/tmp/debug.log", "a")
+if file then
+    file:write("Color Scheme: " .. EcoVim.colorscheme .. "\n")
+    file:close()
+end
+
 
 -- Ecovim Colors
 vim.api.nvim_set_hl(0, "EcovimPrimary", { fg = "#488dff" })

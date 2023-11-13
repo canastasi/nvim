@@ -15,8 +15,6 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- Set the Darcula theme here
-      vim.cmd([[colorscheme darcula]])
       vim.cmd([[
         autocmd BufWinEnter * highlight Normal guibg=#1e1f21
       ]])
@@ -25,11 +23,8 @@ return {
   {
     "navarasu/onedark.nvim",
     lazy = false,
-    priority = 1000,
-    config = function()
-      -- Set the OneDark theme here
-      vim.cmd([[colorscheme onedark]])
-    end,
+    priority = 100,
+    config = true,
   },
   { "nvim-lua/plenary.nvim" },
   {

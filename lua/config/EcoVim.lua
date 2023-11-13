@@ -18,12 +18,12 @@ local icons = require("utils.icons")
 --  vim.cmd[[autocmd VimEnter * NvimTreeToggle]]
 --end
 
--- Default to darcula unless the NEOVIM_COLOR_SCHEME env var is set
+-- Default to darcula unless the NEOVIM_THEME env var is set
 function get_env_var(name)
 	local value = os.getenv(name)
 	return value ~= nil and value or "darcula"
 end
-local color_scheme = get_env_var("NEOVIM_COLOR_SCHEME")
+local color_scheme = get_env_var("NEOVIM_THEME")
 
 EcoVim = {
 	colorscheme = color_scheme,
@@ -35,7 +35,7 @@ EcoVim = {
 	plugins = {
 		ai = {
 			chatgpt = {
-				enabled = true,
+				enabled = false,
 			},
 			codeium = {
 				enabled = false,
