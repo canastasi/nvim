@@ -22,6 +22,15 @@ return {
       ]])
     end,
   },
+  {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Set the OneDark theme here
+      vim.cmd([[colorscheme onedark]])
+    end,
+  },
   { "nvim-lua/plenary.nvim" },
   {
     "nvim-tree/nvim-web-devicons",
