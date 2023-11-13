@@ -18,8 +18,15 @@ local icons = require("utils.icons")
 --  vim.cmd[[autocmd VimEnter * NvimTreeToggle]]
 --end
 
+-- Default to darcula unless the NEOVIM_COLOR_SCHEME env var is set
+function get_env_var(name)
+	local value = os.getenv(name)
+	return value ~= nil and value or "darcula"
+end
+local color_scheme = get_env_var("NEOVIM_COLOR_SCHEME")
+
 EcoVim = {
-	colorscheme = "darcula",
+	colorscheme = color_scheme,
 	ui = {
 		float = {
 			border = "rounded",
